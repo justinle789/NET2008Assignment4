@@ -66,7 +66,7 @@ def yomask():
     for el in timezone:
         calc = math.trunc(int(currentHour) + timezone[el]["UTC-time"] - usersTimeZone)
         currentDay = time.strftime("%e")
-        if calc >= 24:                         # Accounts for timezones are on a different day.
+        if calc >= 24:                         # Accounts for timezones that are on a different day.
             calc -= 24
             ji = int(currentDay) + 1
             currentDay = str(math.trunc(ji))
